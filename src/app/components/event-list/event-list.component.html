@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-6" *ngFor="let item of EventsList">
+            <div class="card">
+                <img class="" [src]="item.imageUrl" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{item.eventName}}</h4>
+                    <p class="card-text"> {{item.startDate | date:'short'}} =>{{item.location}} = {{item.price}}</p>
+                    <button class="btn btn-success">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,75 @@
+<div class="row mt-10 mb-10">
+    <div class="container">
+        <h4 class="text-center"><i>New Event Create Form</i></h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-2 mb-2">
+        <div class="col-4">
+            <label for="EventName">Event Name</label>
+            <input class="form-control" type="text" name="EventName" id="EventName" [(ngModel)]="createEventObj.EventName">
+        </div>
+        <div class="col-4">
+            <label for="Description">Description</label>
+            <input class="form-control" type="text" name="Description" id="Description"
+                [(ngModel)]="createEventObj.Description">
+        </div>
+        <div class="col-4">
+            <label for="Location">Location</label>
+            <input class="form-control" type="text" name="Location" id="Location" [(ngModel)]="createEventObj.Location">
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-3">
+            <label for="StartDate">StartDate</label>
+            <input class="form-control" type="date" name="StartDate" id="StartDate" [(ngModel)]="createEventObj.StartDate">
+        </div>
+        <div class="col-3">
+            <label for="StartTime">StartTime</label>
+            <input class="form-control" type="time" name="StartTime" id="StartTime" [(ngModel)]="createEventObj.StartTime">
+        </div>
+        <div class="col-3">
+            <label for="EndDate">EndDate</label>
+            <input class="form-control" type="date" name="EndDate" id="EndDate" [(ngModel)]="createEventObj.EndDate">
+        </div>
+        <div class="col-3">
+            <label for="EndTime">EndTime</label>
+            <input class="form-control" type="time" name="EndTime" id="EndTime" [(ngModel)]="createEventObj.EndTime">
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-4">
+            <label for="Capacity">Capacity</label>
+            <input class="form-control" type="text" name="Capacity" id="Capacity" [(ngModel)]="createEventObj.Capacity">
+        </div>
+        <div class="col-4">
+            <label for="Price">Price</label>
+            <input class="form-control" type="number" name="Price" id="Price" [(ngModel)]="createEventObj.Price">
+        </div>
+
+        <div class="col-4">
+            <label for="ImageUrl">ImageUrl</label>
+            <input class="form-control" type="text" name="ImageUrl" id="ImageUrl" [(ngModel)]="createEventObj.ImageUrl">
+        </div>
+
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col-6">
+            <label for="">Is Identity Mandatory ?</label>
+            <input type="checkbox" name="IsIdentityMandatory" id="IsIdentityMandatory"
+                [(ngModel)]="createEventObj.IsIdentityMandatory">
+        </div>
+        <div class="col-6">
+            <label for="">Is Couple Entry Mandatory ?</label>
+            <input type="checkbox" name="IsCoupleEntryMandatory" id="IsCoupleEntryMandatory"
+                [(ngModel)]="createEventObj.IsCoupleEntryMandatory">
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="row">
+            <div class="col-4">
+                <button class="btn btn-info btn-lg" type="button" (click)="CreateEvent()">AddEvent</button>
+            </div>
+        </div>
+    </div>
+</div>

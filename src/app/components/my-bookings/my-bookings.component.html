@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-4" *ngFor="let item of bookings">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{item.eventName}}</h4>
+                    <p class="card-text">{{item.startDate}}</p>
+                    <a class="">{{item.noOfTickets}}</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

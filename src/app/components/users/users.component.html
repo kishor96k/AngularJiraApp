@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row d-flex text-end">
+        <div class="col-12">
+            <button class="btn btn-lg btn-primary" data-bs-toggle="modal"  data-bs-target="#userModal">
+                Create New User
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3" *ngFor="let item of usersList">
+        <div class="card p-2 m-2">
+            <div class="card-header bg-info">
+                {{item.emailId}}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6"> {{item.fullName}}</div>
+                    <div class="col-6"> {{item.createdDate | date:'short'}}</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success btn-sm" (click)="onEdit(item.userId)">Edit</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-danger btn-sm" (click)="onDelete(item.userId)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New User</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="emailId">email Id</label>
+                        <input type="email" name="emailId" id="emailId" class="form-control"
+                            [(ngModel)]="userCreateObj.projectName">
+                    </div>
+                    <div class="col-4">
+                        <label for="fullName">full Name</label>
+                        <input type="text" name="fullName" id="fullName" class="form-control"
+                            [(ngModel)]="userCreateObj.fullName">
+                    </div>
+                    <div class="col-4">
+                        <label for="password">password</label>
+                        <input type="password" name="password" id="password" class="form-control"
+                            [(ngModel)]="userCreateObj.password">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="createUser()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
